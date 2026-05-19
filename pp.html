@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hafidz atha ramadhan</title>
+    <link rel="stylesheet" href="p.css">
+</head>
+<body class="programmer-portfolio">
+
+    <header class="dev-nav">
+        <div class="nav-brand">&lt;SA /&gt;</div>
+        <div class="nav-status">System: <span class="pulse-text">Stable</span></div>
+        </header>
+
+    <div class="dashboard-wrapper">
+        <main>
+            <article>
+                <section id="tentang-dev" class="code-section">
+                    <div class="section-tag">// 01 . About_Me</div>
+                    <h2>Profil Developer</h2>
+                    <p>Halo, saya <span class="highlight">Hafidz atha ramadhan</span>, seorang mahasiswa Teknik Informatika di Universitas Ahmad Dahlan. Berfokus pada logika pemrograman, arsitektur web modern, dan eksplorasi teknologi baru untuk menciptakan solusi digital yang efisien dan interaktif.</p>
+                </section>
+
+                <section id="hobi-dev" class="code-section">
+                    <div class="section-tag">// 02 . Core_Interests</div>
+                    <h2>Hobi & Fokus Taktis</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card">
+                            <div class="card-num">01</div>
+                            <h5>Gaming Strategy</h5>
+                            <p>Melatih manajemen sumber daya, analisis keputusan cepat, dan pemecahan masalah.</p>
+                        </div>
+                        <div class="tech-card">
+                            <div class="card-num">02</div>
+                            <h5>Motor Racing</h5>
+                            <p>Memahami mekanika dasar mesin, fokus berkendara, serta membangun jejaring komunitas.</p>
+                        </div>
+                        <div class="tech-card">
+                            <div class="card-num">03</div>
+                            <h5>Adventure</h5>
+                            <p>Menjelajah alam terbuka untuk mencari perspektif dan pengalaman baru.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="kontak-dev" class="code-section">
+                    <div class="section-tag">// 03 . Connect_Gate</div>
+                    <h2>Hubungi Node</h2>
+                    <div class="contact-box">
+                        <div class="contact-details">
+                            <p><span>[Email]</span> 2500018026@webmail.uad.ac.id</p>
+                            <p><span>[WhatsApp]</span> +62 851-6625-3992</p>
+                        </div>
+                        
+                        <form class="dev-form" onsubmit="return false;">
+                            <div class="input-wrapper">
+                                <label for="input-user">Identification Name:</label>
+                                <input type="text" id="input-user" placeholder="type visitor name here...">
+                            </div>
+                        </form>
+
+                        <div class="access-log" id="log-display" style="display: none;">
+                            <p class="text-green">[SUCCESS] Access granted for node: <span id="user-node">Guest</span></p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <aside class="dev-sidebar">
+            <div class="coder-card">
+                <div class="coder-avatar">
+                    <img src="poto.jpeg" alt="Hafidz atha ramadhan" class="avatar-img">
+                    <div class="scan-line"></div>
+                </div>
+                
+                <h3 class="coder-name">Hafidz atha ramadhan</h3>
+                <p class="coder-role">System Engineer Student</p>
+
+                <div class="spec-list">
+                    <div class="spec-item"><span class="lbl">NIM</span><span class="val">2500018026</span></div>
+                    <div class="spec-item"><span class="lbl">CLASS</span><span class="val">A - INF</span></div>
+                    <div class="spec-item"><span class="lbl">UNIV</span><span class="val">UAD</span></div>
+                    <div class="spec-item"><span class="lbl">BATCH</span><span class="val">2025</span></div>
+                    <div class="spec-item"><span class="lbl">STATUS</span><span class="valbadge">ACTIVE</span></div>
+                </div>
+
+                <div class="net-links">
+                    <p class="net-title">// External_Links</p>
+                    <a href="https://www.instagram.com/hafidz_athaa?igsh=MXdjZmxsYWNtYWZtZg==" class="net-btn">Instagram</a>
+                    <a href="https://wa.me/6285166253922" class="net-btn">WhatsApp</a>
+                    <a href="mailto:2500018063@webmail.uad.ac.id" class="net-btn">Email</a>
+                    <a href="https://www.tiktok.com/@opett.......0?_r=1&_t=ZS-96UE2tCh4zs" class="net-btn">Tiktok</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="tech-footer">
+        <p>// Compile Success &copy; 2026 | Hafidz atha ramadhan | Tugas Praktikum Pemrograman Web</p>
+    </footer>
+
+    <script>
+        const inputUser = document.getElementById('input-user');
+        const logDisplay = document.getElementById('log-display');
+        const userNode = document.getElementById('user-node');
+
+        inputUser.addEventListener('input', function() {
+            if (inputUser.value.trim() !== "") {
+                logDisplay.style.display = "block";
+                userNode.innerText = inputUser.value;
+            } else {
+                logDisplay.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
