@@ -1,0 +1,355 @@
+/* ==========================================================================
+   GLOBAL RESET & STYLING
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace, sans-serif; /* Font khas programmer */
+}
+
+body {
+    background-color: #080a0f;
+    /* Background motif grid kotak-kotak tipis seperti editor coding digital */
+    background-image: 
+        linear-gradient(rgba(0, 255, 102, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 102, 0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #a5b4fc;
+    min-height: 100vh;
+}
+
+.text-green { color: #00ff66 !important; }
+.highlight { color: #ffffff; font-weight: bold; border-bottom: 1px dashed #00ff66; }
+
+/* ==========================================================================
+   HALAMAN 1: TERMINAL LANDING
+   ========================================================================== */
+.programmer-landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-container {
+    max-width: 650px;
+    width: 90%;
+    margin: auto;
+    background-color: #0c0f17;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(0, 255, 102, 0.05);
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+.terminal-header {
+    background-color: #161b26;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #1e293b;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.dot.red { background-color: #ef4444; }
+.dot.yellow { background-color: #f59e0b; }
+.dot.green { background-color: #10b981; }
+
+.terminal-title {
+    color: #64748b;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.terminal-body {
+    padding: 25px;
+}
+
+.cmd-text {
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+.prompt { color: #38bdf8; }
+.output-text { color: #64748b; font-size: 14px; }
+
+.dev-brand {
+    margin: 40px 0;
+    border-left: 3px solid #00ff66;
+    padding-left: 20px;
+}
+
+.dev-brand h1 {
+    color: #ffffff;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.dev-title {
+    color: #00ff66;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btn-code-execute {
+    display: inline-block;
+    background: transparent;
+    color: #00ff66;
+    border: 1px solid #00ff66;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-code-execute:hover {
+    background: rgba(0, 255, 102, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+}
+
+/* ==========================================================================
+   HALAMAN 2: PORTFOLIO DASHBOARD
+   ========================================================================== */
+.dev-nav {
+    background-color: #0c0f17;
+    border-bottom: 1px solid #1e293b;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: #00ff66;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-status {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.btn-exit {
+    color: #ef4444;
+    text-decoration: none;
+    border: 1px solid #ef4444;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* Layouting Main Content (Kiri) dan Sidebar (Kanan) secara Asimetris */
+@media (min-width: 901px) {
+    body.programmer-portfolio {
+        display: block;
+    }
+    main {
+        width: 63%;
+        margin-left: 4%;
+        margin-top: 40px;
+        float: left;
+    }
+    aside.dev-sidebar {
+        width: 28%;
+        margin-right: 4%;
+        margin-top: 40px;
+        float: right;
+    }
+}
+
+.code-section {
+    background: #0c0f17;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.section-tag {
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.code-section h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* GRID HOBI / TECH */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tech-card {
+    background-color: #121620;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+}
+
+.card-num {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 255, 102, 0.05);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.tech-card h5 {
+    color: #00ff66;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.tech-card p {
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* KONTAK & FORM */
+.contact-details p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+.contact-details span { color: #38bdf8; }
+
+.dev-form { margin-top: 20px; }
+.input-wrapper label { display: block; font-size: 12px; color: #64748b; margin-bottom: 5px;}
+.input-wrapper input {
+    width: 100%;
+    background-color: #121620;
+    border: 1px solid #1e293b;
+    padding: 10px;
+    color: #ffffff;
+    outline: none;
+    border-radius: 4px;
+}
+.input-wrapper input:focus { border-color: #00ff66; }
+
+.access-log {
+    margin-top: 15px;
+    background-color: rgba(0, 255, 102, 0.05);
+    border: 1px dashed #00ff66;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   SIDEBAR & CARD PROFIL (KANAN)
+   ========================================================================== */
+.coder-card {
+    background: #0c0f17;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.coder-avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px auto;
+    position: relative;
+    border: 1px solid #1e293b;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coder-name {
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+}
+.coder-role {
+    text-align: center;
+    color: #00ff66;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.spec-list {
+    border-top: 1px solid #1e293b;
+    padding-top: 15px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.spec-item .lbl { color: #64748b; }
+.spec-item .val { color: #f8fafc; }
+.valbadge {
+    background: rgba(0, 255, 102, 0.1);
+    color: #00ff66;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+/* TOMBOL SOSIAL VERTIKAL */
+.net-links { margin-top: 25px; }
+.net-title { font-size: 12px; color: #64748b; margin-bottom: 10px; }
+.net-btn {
+    display: block;
+    text-align: center;
+    background-color: #121620;
+    border: 1px solid #1e293b;
+    color: #ffffff;
+    padding: 8px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+.net-btn:hover {
+    border-color: #00ff66;
+    color: #00ff66;
+    background-color: rgba(0, 255, 102, 0.02);
+}
+
+/* FOOTER */
+.tech-footer {
+    clear: both;
+    text-align: center;
+    color: #475569;
+    font-size: 11px;
+    padding: 40px 0 20px 0;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 900px) {
+    main, aside.dev-sidebar {
+        width: 92% !important;
+        margin: 20px auto !important;
+        float: none !important;
+    }
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}
